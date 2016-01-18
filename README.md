@@ -43,5 +43,5 @@ Now open browser and access the URL
 http://IP_Address:5000
 ```
 
-**4. Create/Modify/Delete Linux users along with Suodoers entry**
+**4. Create/Modify/Delete Linux users along with Sudoers entry**
 
