@@ -121,19 +121,19 @@ def passencrypt(cmd): # encrypt the password
 def isUserExist(user): # check if user is exist or not
     cmd = ["id", user]
     rcode=command(cmd)
-    print rcode
+#   print rcode
     return rcode
 
 def addUser(username,shell,homedir,passwd): # add a system user using system commands
     passoutput=passencrypt(["/usr/bin/sudo", "/usr/bin/openssl", "passwd", "-crypt", str(passwd)])
     returnCode=command(["/usr/bin/sudo", "/usr/sbin/useradd", "-m", "-d", str(homedir), "-s", str(shell), "-p", str(passoutput.strip()), username])
-    print username,shell,homedir,passwd
+#   print username,shell,homedir,passwd
     return returnCode
 
 def modUser(username,shell,homedir,passwd): # modify a system user using system commands
     passoutput=passencrypt(["/usr/bin/sudo", "/usr/bin/openssl", "passwd", "-crypt", str(passwd)])
     returnCode=command(["/usr/bin/sudo", "/usr/sbin/usermod", "-d", str(homedir), "-s", str(shell), "-p", str(passoutput.strip()), username])
-    print username,shell,homedir,passwd
+ #  print username,shell,homedir,passwd
     return returnCode
 
 def delUser(username): # delete user
