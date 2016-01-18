@@ -39,7 +39,7 @@ git clone https://github.com/gkbijarniya/web_app.git
 cd web_app
 flask -a app run --host=0.0.0.0
 
-and open browser and access 
+Now open browser and access the URL
 http://IP_Address:5000
 ```
 
