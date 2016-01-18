@@ -7,7 +7,7 @@ This App is tested on Ubuntu 14.04.1
 **1. Web User Creation**
 
 First of all create a normal user e.g. web
-```
+```bash
 sudo useradd web -m
 sudo passwd web
 sudo vim /etc/sudoers
@@ -17,7 +17,7 @@ web    ALL=(ALL) NOPASSWD: ALL
 
 **2. Flask Installation:**
 
-```
+```bash
 su - web
 sudo apt-get update
 sudo apt-get install python-pip git
@@ -34,7 +34,7 @@ sudo pip install https://github.com/mitsuhiko/flask/tarball/master
 ```
 
 **3. Starting the App**
-```
+```bash
 git clone https://github.com/gkbijarniya/web_app.git
 cd web_app
 flask -a app run --host=0.0.0.0
